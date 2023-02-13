@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        /* section with light blue bg image */
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        /* section with light blue bg image */ 
         .custombgimg{
             background-size: 100% 100%;
             padding-top: 12rem;
@@ -29,7 +35,7 @@
             background-size: 100% 100%;
             padding-top: 8rem;
             padding-bottom: 8rem;
-        }
+         }
 
         .companies {
             animation: 35s infinite linear moveimage;
@@ -49,9 +55,12 @@
 
 </head>
 <body class="font-mullish  box-border">
-    <!-- NAVBAR -->
-    <nav class="w-full bg-deepBlue h-[85px] ">
-        <div class="w-10/12  max-w-[1080px] mx-auto h-[100%]  flex justify-between gap-3 ">
+    <!-- top level container -->
+    <div class="wrapper w-full overflow-x-hidden">
+
+        <!-- NAVBAR -->
+    <nav class="  w-full bg-deepBlue h-[85px] ">
+        <div class=" w-10/12 max-w-[1080px] mx-auto h-[100%]  flex justify-between gap-3 ">
             <!--  logo  -->
             <a href="index.html" class="flex items-center mr-4"><img src="./assets/logo.svg" loading="lazy" alt="" width="99px" height="30px"></a>
 
@@ -1279,6 +1288,8 @@
 
         </div>
      </footer>
+
+    </div>
     
 </body>
 </html>
