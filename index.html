@@ -1,7 +1,3 @@
-<!-- 1) Features part-2 bg image
-        2) section with light blue bg image  (done in style tag)
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,9 +52,14 @@
                 .side-image{
                     width: 345px;
                 }
-                
             }
-        
+
+            @media(max-width:768px) {
+
+                .custombgimg{
+                    background-size: cover;
+                }
+            }
     </style>
 
 </head>
@@ -663,21 +664,21 @@
         <section class="relative">
 
             <!-- absolute positioned images -->
-            <img src="./assets//feature-section1-dottedrows.png" alt="" loading="lazy" class="absolute top-[-6rem] left-[34.3%] -z-[100]">
+            <img src="./assets//feature-section1-dottedrows.png" alt="" loading="lazy" class="hidden md:block absolute top-[-6rem] left-[34.3%] -z-[100]">
 
-            <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy" class="absolute top-[-6.1rem] right-[11%] -z-[100]">
+            <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy" class="hidden md:block absolute top-[-6.1rem] right-[11%] -z-[100]">
 
             <!-- content container -->
-            <div class="w-10/12 max-w-[1080px] grid grid-cols-3 mx-auto gap-4 gap-y-10 pt-[1rem]">
+            <div class="w-10/12 max-w-[1080px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-4 gap-y-10 pt-[1rem]">
 
                 <!-- heading -->
-                <div class="w-full flex flex-col justify-center h-[300px] py-[3rem]">
+                <div class="md:w-full flex flex-col justify-center h-[300px] py-[3rem] w-[315px] mx-auto md:mx-0">
                     <h2 class="text-deepBlueHead text-5xl font-extrabold ">New in the </h2>
                     <h2 class="text-lightBlue500 text-5xl font-extrabold my-[1rem]">Razorpay</h2><h2 class="text-deepBlueHead text-5xl font-extrabold ">Product suite</h2>
                 </div>
 
                 <!-- card-1 -->
-                <div class="w-full bg-white bg-[url(/assets/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:bg-[url(/assets/instant-settlement-bghover.svg)] max-h-[300px] flex flex-col pt-[3rem] pb-[1.5rem] px-[2.5rem] shadow-md hover:scale-105 transition-all duration-200">
+                <div class="w-full bg-white bg-[url(/assets/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:bg-[url(/assets/instant-settlement-bghover.svg)] max-h-[300px] flex flex-col pt-[2rem] lg:pt-[3rem] pb-[1.5rem] px-[2.5rem] shadow-md hover:scale-105 transition-all duration-200">
 
                     <img src="./assets/Xicon.svg" alt="" class=" w-10 h-10 bg-gradient-to-tr from-lightBlue500 to-lightBlue rounded-[50%]">
 
@@ -688,7 +689,7 @@
                     </div>
 
                     <div class="flex group relative">
-                        <a href="#" class="text-[1rem]  font-bold text-lightBlue500 ">Know More 
+                        <a href="#" class="text-[1rem]  font-bold text-lightBlue500">Know More 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" absolute  top-1 inline-block feather feather-chevron-right w-5 h-5 text-lightBlue500"><polyline points="9 18 15 12 9 6"></polyline></svg>
                         </a>
                     </div>                
@@ -779,18 +780,18 @@
         <section class=" w-full bg-[url(/assets/core-features-sectionBg.svg)] bg-no-repeat bg-cover bg-center  custombgimg relative z-[1000]">
 
             <!-- content container -->
-            <div class="w-11/12 max-w-[1080px] mx-auto pt-4">
+            <div class="w-11/12 max-w-[1080px] mx-auto pt-4 mt-[10rem] lg:mt-0 mb-[7rem] lg:mb-0">
 
                 <div class="w-full pb-8">
-                    <h2 class="flex justify-center text-2xl text-white font-extrabold">Features</h2>
+                    <h2 class="flex justify-center text-2xl text-white font-extrabold   ">Features</h2>
         
                     <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-4"></div>
         
-                    <p class="w-[41%] mx-auto text-center text-white text-[1rem] "> Empower your business with all the right tools to accept online payments and provide the best customer experience</p>
+                    <p class="w-[65%] lg:w-[50%] xl:w-[42%] mx-auto text-center text-white text-[1rem] "> Empower your business with all the right tools to accept online payments and provide the best customer experience</p>
                 </div>
 
                 <!-- grid container -->
-                <div class="w-full grid grid-cols-4 gap-[2rem]">
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem]">
 
                     <!-- card-1 -->
                     <div class="text-white">
@@ -872,10 +873,10 @@
         <!-- Animated Image section -->
         <section class="w-full bg-[#f5f8fe] relative flex justify-center items-end  mt-[-200px] pt-40 pb-12">
             <!-- container div -->
-            <div class="w-11/12 max-w-[1080px] mx-auto flex  flex-row overflow-hidden relative">
+            <div class="w-11/12 max-w-[1080px] mx-auto flex flex-col md:flex-row overflow-hidden relative">
 
                 <!-- Left -->
-                <div class="flex flex-col justify-center w-[70%]">
+                <div class="flex flex-col justify-center w-[90%] md:w-[70%] shrink mx-auto md:mx-0 mb-[3rem] md:mb-0">
                     <h3 class="text-deepBlueHead text-2xl font-extrabold">Join the 50,00,000+ businesses using Razorpay</h3>
 
                     <div class="w-6 h-1 bg-greenLight mt-4 mb-9"></div>
@@ -886,7 +887,7 @@
                 </div>
 
                 <!-- Right -->
-                <div class="h-[500px] relative w-[60%]">
+                <div class="h-[500px] relative w-[90%] md:w-[60%] overflow-hidden mx-auto md:mx-0">
 
                     <!-- top gradient div -->
                     <div class="absolute w-full h-[200px] top-0 z-20" style="background: linear-gradient(180deg, #f4f8ff, #fff0)"></div>
