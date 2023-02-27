@@ -34,7 +34,7 @@
          }
 
         .companies {
-            animation: 35s infinite linear moveimage;
+            animation: 30s infinite linear moveimage;
         }
 
         @keyframes moveimage {
@@ -58,6 +58,13 @@
 
                 .custombgimg{
                     background-size: cover;
+                }
+            }
+
+            @media(max-width:1024px) {
+                .custombgimg2 {
+                    background-size: cover;
+                    padding: 12rem 0;
                 }
             }
     </style>
@@ -909,7 +916,8 @@
             <!-- container -->
             <div class="w-11/12 max-w-[1300px] relative flex flex-col mx-auto py-20">
 
-                <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy" class="absolute top-[7.2rem] left-[3.5rem] scale-[0.85]">
+                <!-- Absolute image -->
+                <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy" class="hidden md:block absolute top-[7.2rem] left-[3.5rem] scale-[0.85]">
 
                 <div class="flex flex-col justify-center items-center mb-[5rem]">
                     <p class="text-2xl font-extrabold text-deepBlueHead">An Experience</p>
@@ -920,9 +928,9 @@
                 </div>
 
                 <div class="flex justify-between relative mb-[5rem]">
-                    <!-- circular button -->
-                    <button class="bg-[#f4f8ff] w-[96px] h-[96px] rounded-full left-0 top-[6.5rem] flex justify-center items-center relative">
-                        <div class="w-[65%] h-[65%] bg-[#f4f8ff]  mix-blend-multiply rounded-full flex justify-center items-center">
+                    <!-- circular button left -->
+                    <button class="bg-[#f4f8ff] md:w-[96px] md:h-[96px] w-[60px] h-[60px] rounded-full left-0 top-[6.5rem] flex justify-center items-center relative mr-[1rem]">
+                        <div class="w-[65%] h-[65%]  bg-[#f4f8ff]  mix-blend-multiply rounded-full flex justify-center items-center">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left stroke-[5px] w-6 h-6 md:w-10 md:h-10 text-gray-400"><polyline points="15 18 9 12 15 6"></polyline></svg>
 
@@ -930,26 +938,26 @@
                     </button>
 
                     <!-- user image and description -->
-                    <div class="flex items-center gap-[10rem]">
-                        <img src="./assets/testimonial.jpg" alt="" height="320" width="320" class="rounded-xl">
+                    <div class="flex flex-col xl:flex-row items-center xl:gap-[10rem]">
+                        <img src="./assets/testimonial.jpg" alt="" height="320" width="320" class="h-[250px] w-[250px] md:h-[320px] md:w-[320px] rounded-xl mb-3 xl:mb-0">
 
-                        <div class="flex flex-col ">
+                        <div class="flex flex-col max-w-[320px]">
                             <img src="./assets/quotes.svg" loading="lazy" alt="" class="w-[35px] h-[40px]">
 
-                            <h2 class="text-3xl font-extralight w-[25rem]">Readymade Closed Wallet Solution For Quick Refunds</h2>
+                            <h2 class="text-3xl font-extralight w-[100%] xl:w-[25rem]">Readymade Closed Wallet Solution For Quick Refunds</h2>
 
                             <a href="#" class="text-grayText text-sm italic underline">Learn More</a>
 
-                            <h3 class=" text-[1.5rem] font-extrabold">Lorem Ipsum</h3>
+                            <h3 class=" text-[1.5rem] font-extrabold order-[-3] xl:order-[0] mx-auto xl:mx-0">Lorem Ipsum</h3>
 
-                            <h4>CEO, XYZ Engineering Company</h4>
+                            <h4 class="order-[-2] xl:order-[0] mx-auto xl:mx-0">CEO, XYZ Engineering Company</h4>
 
-                            <img src="./assets/fake-company-logo.png" loading="lazy" alt="" width="80 hei40">
+                            <img src="./assets/fake-company-logo.png" loading="lazy" alt="" width="80" class="order-[-1] xl:order-[0] mx-auto xl:mx-0">
                         </div>
                     </div>
 
-                    <!-- circular button -->
-                    <button class="bg-[#f4f8ff] w-[96px] h-[96px] rounded-full relative left-0 top-[6.5rem] flex justify-center items-center">
+                    <!-- circular button right-->
+                    <button class="bg-[#f4f8ff] md:w-[96px] md:h-[96px] w-[60px] h-[60px]  rounded-full relative left-0 top-[6.5rem] flex justify-center items-center ml-[1rem]">
                         <div class="w-[65%] h-[65%] bg-[#f4f8ff]  mix-blend-multiply rounded-full flex justify-center items-center">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right stroke-[5px] w-6 h-6 md:w-10 md:h-10 text-gray-400"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -985,7 +993,7 @@
             <div class="w-10/12 max-w-[1080px] flex mx-auto justify-between">
 
                 <!-- Left -->
-                <div class="text-white flex flex-col justify-between w-[60%]">
+                <div class="text-white flex flex-col justify-between w-[100%] lg:w-[60%]">
                     <h3 class="text-2xl font-extrabold">
                         Supercharge your business with Razorpay</h3>
         
@@ -1024,7 +1032,7 @@
                 </div>
         
                 <!-- Right -->
-                <img src="./assets/ctaImg.svg"  loading="lazy" alt="" width="240" height="282" class="">
+                <img src="./assets/ctaImg.svg"  loading="lazy" alt="" width="240" height="282" class="hidden lg:block">
 
             </div>
 
@@ -1036,10 +1044,10 @@
         <!-- Footer -->
         <footer class="w-full pt-12 pb-5 " style="background: linear-gradient(to right, #eef9fe, #edf7ff);">
             <!-- container -->
-            <div class="w-10/12 max-w-[1080px] flex mx-auto gap-x-[8rem]">
+            <div class="w-10/12 md:w-11/12 max-w-[1080px] flex flex-col lg:flex-row mx-auto gap-x-[8rem]">
 
                 <!-- Left -->
-                <div class="flex flex-col justify-between gap-3 w-[24%] pb-[2rem]">
+                <div class="flex flex-col justify-between gap-3 w-[100%] md:w-[37%] lg:w-[26%] pb-[2rem]">
                     <img src="./assets/logo-dark.svg" alt="" loading="lazy" width="120" height="24">
 
                     <p class="text-grayText text-sm mb-[0.5rem]">Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.</p>
@@ -1053,10 +1061,10 @@
                     <h2 class="uppercase text-grayBlue font-bold">Subscribe to Our Newsletter</h2>
 
                     <!-- container for newsletter input -->
-                    <div  class="relative mb-[0.3rem]">
-                        <input type="email" name="" id="" placeholder="Your email address" class="w-full border-lightGray border pl-3 text-[0.8rem] h-[2.5rem] rounded-sm focus:outline-lightBlue">
+                    <div  class="relative mb-[0.3rem] w-fit md:w-[90%] lg:w-full">
+                        <input type="email" name="" id="" placeholder="Your email address" class="min-w-[265px] w-full border-lightGray border pl-3 text-[0.8rem] h-[2.5rem] rounded-sm focus:outline-lightBlue">
 
-                        <a href="#"><button class="px-4 py-[0.4rem] text-lightBlue300  text-sm rounded-sm bg-white  font-bold hover:text-lightBlue500 transi duration-500 flex gap-2 items-center absolute right-1 top-1">
+                        <a href="#"><button class="px-4 py-[0.4rem] text-lightBlue300  text-sm rounded-sm bg-white  font-bold hover:text-lightBlue500 transi duration-500 flex gap-2 items-center absolute right-[0] lg:right-1 top-1">
                             Subscribe
                             
                             <svg viewBox="0 0 24 24" focusable="false" class=" w-3.5"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg>
@@ -1073,9 +1081,9 @@
                 </div>
 
                 <!-- Right -->
-                <div class="flex gap-x-4">
+                <div class="flex flex-col  md:flex-row justify-between lg:gap-x-4">
                     <!-- col-1 -->
-                    <div class="flex flex-col gap-y-3">
+                    <div class="flex flex-col gap-y-3 mb-5 md:mb-0">
                         <!-- block1 -->
                         <div class="flex flex-col">
                             <p class="text-[1rem] text-gray2 font-bold mb-[0.5rem]">BANKING PLUS</p>
@@ -1163,7 +1171,7 @@
                     </div>
 
                     <!-- col-2 -->
-                    <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-3 mb-5 md:mb-0">
                         <!-- block1 -->
                         <div class="flex flex-col">
                             <p class="text-[1rem] text-gray2 font-bold mb-[0.5rem]">ACCEPT PAYMENTS</p>
